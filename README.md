@@ -17,16 +17,28 @@ This application leverages the power of Laravel, a robust PHP framework, and the
 
 ### Usage
 
-Detailed instructions on how to use the application will be provided, covering aspects such as:
+Detailed instructions on how to use the application are provided below:
 
-### 1. Scanning QR codes at the entrance. (Leads to website)
-![QR Code Attendance Poster](./Images/Poster.png)
-### 2. Functionalities for managing user access.
-![QR Code Attendance Poster](./Images/Page-One.png)
-![QR Code Attendance Poster](./Images/Page-Two.png)
-### 3. Viewing and interpreting attendance data. With ability to delete names when leaving the building
-![QR Code Attendance Poster](./Images/Page-Three.png)
+#### 1. Scanning QR Codes at the Entrance
+This feature leads to the website (currently set to local host for testing, but in production, it would be the live website URL).
 
+![QR Code Scanning](./Images/Poster.png)
 
+---
 
+#### 2. Managing User Access
+Admin functionalities for managing user profiles and access permissions are illustrated in the following screens:
+
+![User Management - Page One](./Images/Page-One.png)
+
+---
+
+![User Management - Page Two](./Images/Page-Two.png)
+
+---
+
+#### 3. Viewing and Interpreting Attendance Data
+The system allows for viewing attendance data and provides the ability to delete names when individuals leave the building.
+
+![Attendance Data - Page Three](./Images/Page-Three.png)
 
