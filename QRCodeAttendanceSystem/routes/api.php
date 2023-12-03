@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AttendanceController; // Ensure you import the controller
+use App\Http\Controllers\EmployeeController; // Ensure you import the controller
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +18,8 @@ use App\Http\Controllers\AttendanceController; // Ensure you import the controll
 // Define API routes for entry and exit, note that they're prefixed with 'api/'
 Route::post('/entry', [AttendanceController::class, 'entry'])->middleware('auth:sanctum');
 Route::post('/exit', [AttendanceController::class, 'exit'])->middleware('auth:sanctum');
+// Add a new route to return the list of employees
+Route::get('/employees', [AttendanceController::class, 'getEmployees'])->middleware('auth:sanctum');
 
 // The existing sanctum route to return the authenticated user
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

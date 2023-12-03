@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Attendance extends Model
+class Employee extends Model
 {
     use HasFactory;
 
@@ -17,7 +17,7 @@ class Attendance extends Model
         'exit_time'
     ];
 
-    // If you're using user authentication and want to link attendance records to users
+    // Link attendance records to users if a User model exists
     public function user()
     {
         return $this->belongsTo(User::class);
