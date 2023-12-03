@@ -66,6 +66,6 @@ Instructions for Running Your Employee Management System Program
 
 
 Helpful commands:
-1.) npm run dev
-running local developemnt server: http://127.0.0.1:8000
-2.) php artisan serve
+1.) npm run dev from ./QRCodeAttendanceSystem/QRCodeAttendanceSystem
+running local developemnt server: http://127.0.0.1:8000 
+2.) php artisan serve from ./QRCodeAttendanceSystem/QRCodeAttendanceSystem
