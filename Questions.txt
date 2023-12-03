@@ -1,0 +1,35 @@
+Questions
+Q1. How did you make sure that the application can last?
+
+- Using a Framework: The application is built using Laravel which follows the MVC architectural pattern. 
+This provides a solid foundation for building scalable/dynamic applications.
+
+-Input Validation: In the EmployeeController, there's input validation ($request->validate) 
+to ensure that the data being added to the database meets certain criteria, which prevents corrupt or unexpected data from entering the system.
+
+-Use of Templates: Leveraging Blade templating (welcome.blade.php) separates the presentation layer from the business logic, 
+making the user interface easier to manage and update.
+
+-The controller contains methods for creating and deleting employees, encapsulating the business logic away from the presentation, 
+which helps in maintaining and updating the application logic.
+
+-Scheduled Tasks: In QRAttendancePoster.js, the use of scheduled tasks (schedule.scheduleJob) 
+for generating and updating PDFs ensures that the system can handle routine tasks autonomously.
+
+-Error Handling: The application checks if an employee exists before attempting to delete it, 
+preventing potential errors from occurring in case of invalid operations.
+
+
+Q2. Do you have any suggestions for improvement for the company’s managers? How should they be prioritized?
+
+-Comprehensive Error Logging: Implement a system for logging errors that can alert managers in real-time to any issues that arise.
+
+-User Authentication and Authorization: Introduce user roles and permissions to control access to different parts of the application, 
+ensuring that only authorized personnel can perform certain operations.
+
+-Automated Testing: Develop a suite of automated tests to regularly check the functionality of the application, 
+ensuring that new changes don't break existing features.
+
+-User Activity Logs: Keep a log of user activities within the application to track changes 
+
+-Performance Monitoring: Use tools to monitor the performance of the application and to alert managers if the system is slow or unresponsive/crashes.
