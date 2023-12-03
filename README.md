@@ -23,6 +23,6 @@ Detailed instructions on how to use the application will be provided, covering a
 2. Admin functionalities for managing user access.
 3. Viewing and interpreting attendance data.
 
-
+![QR Code Attendance Poster](images/poster.png)
 
 
