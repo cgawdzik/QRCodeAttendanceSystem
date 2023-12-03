@@ -23,7 +23,7 @@
 
         <!-- List of employees with delete buttons -->
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            <h2 class="text-xl font-bold mb-4">Employee List:</h2>
+            <h2 class="text-xl font-bold mb-4">Employee List (Current People In The Building):</h2>
             <ul>
                 @foreach($employees as $employee)
                 <li class="mb-4">
