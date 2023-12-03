@@ -23,7 +23,7 @@ class EmployeeController extends Controller
         ]);
 
         $employee = new Employee();
-        $employee->employee_name = $request->input('employee_name'); // Corrected field name
+        $employee->employee_name = $request->input('employee_name');
         $employee->save();
 
         return redirect()->route('welcome')->with('success', 'Employee added successfully');
