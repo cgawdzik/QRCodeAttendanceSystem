@@ -1,50 +1,65 @@
-// Updated employee-tracker.js with QR code scanning
 new Vue({
     el: '#app',
     data: {
         employeeName: '',
         entered: false,
-        scanner: null
+        employees: []
     },
     mounted() {
-        // Initialize the scanner only if Instascan is loaded and scanner is not yet initialized
-        if (typeof Instascan !== 'undefined' && !this.scanner) {
-            this.initializeScanner();
-        }
+        // Fetch the list of current employees from your Laravel backend when the component is mounted
+        this.fetchEmployees();
     },
     methods: {
-        initializeScanner: function() {
-            let self = this;
-            self.scanner = new Instascan.Scanner({ video: document.getElementById('qr-scanner') });
-            self.scanner.addListener('scan', function (content) {
-                console.log('Scanned content:', content);
-                // You can now use the `content` from the QR code to perform your logic
-                // For simplicity, assuming the content is the employee name
-                self.employeeName = content;
-                // Trigger the appropriate action based on whether the user is entering or exiting
-                if (!self.entered) {
-                    self.registerEntry();
-                } else {
-                    self.registerExit();
-                }
-            });
-
-            // Start the scanner with the first available camera
-            Instascan.Camera.getCameras().then(function (cameras) {
-                if (cameras.length > 0) {
-                    self.scanner.start(cameras[0]);
-                } else {
-                    console.error('No cameras found.');
-                }
-            }).catch(function (e) {
-                console.error(e);
-            });
+        fetchEmployees() {
+            // Fetch employees from your Laravel backend
+            fetch('http://localhost:8000/api/employees') // Replace with your Laravel backend URL
+                .then(response => response.json())
+                .then(data => {
+                    this.employees = data;
+                })
+                .catch(error => {
+                    console.error('Error fetching employee data:', error);
+                });
         },
-        registerEntry: function() {
-            // ... existing entry registration logic
+        registerEntry() {
+            // Implement logic to register entry in your Laravel backend
+            // You can send a POST request to your Laravel backend to register entry
+            // Use this.employeeName to send the employee's name to the backend
+            fetch('http://localhost:8000/api/register-entry', { // Replace with your Laravel backend URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: this.employeeName }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from your backend if needed
+                    this.entered = true; // Set entered to true upon successful entry
+                })
+                .catch(error => {
+                    console.error('Error registering entry:', error);
+                });
         },
-        registerExit: function() {
-            // ... existing exit registration logic
-        }
+        registerExit() {
+            // Implement logic to register exit in your Laravel backend
+            // You can send a POST request to your Laravel backend to register exit
+            // Use this.employeeName to send the employee's name to the backend
+            fetch('http://localhost:8000/api/register-exit', { // Replace with your Laravel backend URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: this.employeeName }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from your backend if needed
+                    this.entered = false; // Set entered to false upon successful exit
+                })
+                .catch(error => {
+                    console.error('Error registering exit:', error);
+                });
+        },
     }
 });
