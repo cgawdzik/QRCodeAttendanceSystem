@@ -1,0 +1,13 @@
+Migrate Database: To create the database tables, run: php artisan migrate
+
+
+Serve Application: Use Artisan to serve your application: php artisan serve
+
+
+Test Routes: Visit the routes you've defined in your web browser to make sure they're working as expected.
+
+
+
+1.) npm run dev
+running local developemnt server: http://127.0.0.1:8000
+2.) php artisan serve
