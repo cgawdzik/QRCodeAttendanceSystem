@@ -18,7 +18,7 @@ const createPDF = async (qrData) => {
     doc.pipe(fs.createWriteStream(outputPath));
 
     // Title
-    doc.fontSize(25).text('QR Attendance System', {
+    doc.fontSize(25).text('DM Inc. Attendance System Management', {
         align: 'center'
     });
 
