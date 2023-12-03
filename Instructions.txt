@@ -53,7 +53,7 @@ Instructions for Running Your Employee Management System Program
      ```
      php artisan serve
      ```
-   - By default, the server will run on http://localhost:8000.
+   - By default, the server will run on http://localhost:8000
 
 8. Access Your Application:
    - Open a web browser and navigate to http://localhost:8000 to access your Employee Management System.
