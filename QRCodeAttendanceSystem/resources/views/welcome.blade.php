@@ -4,7 +4,7 @@
     <title>Employee Management</title>
 </head>
 <body>
-    <h1>Welcome to the Employee Management System</h1>
+    <h1>Welcome to the DM Inc. Employee Management System</h1>
 
     <!-- Form for adding employees -->
     <form action="{{ route('add.employee') }}" method="post">
