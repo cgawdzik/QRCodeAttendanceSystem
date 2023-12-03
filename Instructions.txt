@@ -1,0 +1,71 @@
+(Keep in mind you will have top change the username and password to yours on your machine for the database in the ".env" file!)
+Migrate Database: To create the database tables, run: php artisan migrate
+Serve Application: Use Artisan to serve your application: php artisan serve
+
+
+Instructions for Running Your Employee Management System Program 
+
+1. Prerequisites:
+   - Ensure you have PHP installed on your system. You can check by running:
+     ```
+     php -v
+     ```
+   - Make sure you have Composer installed. You can check by running:
+     ```
+     composer --version
+     ```
+
+2. Clone the Project:
+   - Open your terminal or command prompt.
+   - Navigate to the directory where you want to store the project.
+   - Run the following command to clone the project repository:
+     ```
+     git clone https://github.com/cgawdzik/QRCodeAttendanceSystem
+     ```
+
+3. Install Dependencies:
+   - Navigate to the project directory:
+     ```
+     cd your-employee-management-system
+     ```
+   - Run Composer to install project dependencies:
+     ```
+     composer install
+     ```
+
+4. Configure Environment:
+   - Rename the `.env.example` file to `.env` and configure your database settings, including the database name, username, and password.
+
+5. Generate Application Key:
+   - Generate a unique application key by running the following command:
+     ```
+     php artisan key:generate
+     ```
+
+6. Run Migrations:
+   - Run the database migrations to create the necessary tables in the database:
+     ```
+     php artisan migrate
+     ```
+
+7. Start the Development Server:
+   - Start the development server to run your application locally:
+     ```
+     php artisan serve
+     ```
+   - By default, the server will run on http://localhost:8000.
+
+8. Access Your Application:
+   - Open a web browser and navigate to http://localhost:8000 to access your Employee Management System.
+
+9. Using the Application:
+   - You can add employees by entering their names in the provided form and clicking "Add Employee."
+   - To delete employees, click the "Delete" button next to their names in the list.
+
+10. Enjoy ! 
+
+
+Helpful commands:
+1.) npm run dev
+running local developemnt server: http://127.0.0.1:8000
+2.) php artisan serve
